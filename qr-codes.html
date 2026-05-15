@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR-Codes | Digitales Programmheft</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="index.html"><span>DSP</span><strong>Der Sturm</strong></a>
+    <nav aria-label="Hauptnavigation">
+      <a href="index.html">Figuren</a>
+      <a href="qr-codes.html" aria-current="page">QR-Codes</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro compact">
+      <p class="kicker">Druckbogen</p>
+      <h1>QR-Codes fuer die Figurenseiten</h1>
+      <p>
+        Fuer den lokalen Prototyp zeigen die Codes auf relative Demo-Adressen. Sobald die Seiten online sind,
+        ersetzt du unten die Basisadresse durch die echte Webadresse und druckst die Seite erneut.
+      </p>
+      <label class="url-field">
+        Basisadresse
+        <input id="baseUrl" type="url" value="https://beispiel.at/programmheft/" spellcheck="false">
+      </label>
+    </section>
+
+    <section class="qr-grid" aria-label="QR-Codes">
+      <article class="qr-card" data-path="figuren/mira.html">
+        <img alt="QR-Code fuer Mira">
+        <h2>Mira</h2>
+        <p></p>
+      </article>
+      <article class="qr-card" data-path="figuren/jonas.html">
+        <img alt="QR-Code fuer Jonas">
+        <h2>Jonas</h2>
+        <p></p>
+      </article>
+      <article class="qr-card" data-path="figuren/elia.html">
+        <img alt="QR-Code fuer Elia">
+        <h2>Elia</h2>
+        <p></p>
+      </article>
+      <article class="qr-card" data-path="figuren/hippolyta.html">
+        <img alt="QR-Code fuer Hippolyta">
+        <h2>Hippolyta</h2>
+        <p></p>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

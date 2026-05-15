@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digitale Programmheft | Der Sturm</title>
+  <meta name="description" content="Prototyp eines digitalen Programmhefts mit Figurenseiten, Portraets, Audiostationen und QR-Codes.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="index.html" aria-label="Zur Programmuebersicht">
+      <span>DSP</span>
+      <strong>Der Sturm</strong>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="index.html" aria-current="page">Figuren</a>
+      <a href="qr-codes.html">QR-Codes</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p class="kicker">Digitales Programmheft</p>
+      <h1>Figuren entdecken, Stimmen hoeren, direkt per QR-Code.</h1>
+      <p>
+        Dieser Prototyp zeigt den Grundaufbau: Das Publikum scannt am Spielort einen QR-Code
+        und landet direkt auf der passenden Figurenseite mit Portraet, Kurztext und Audio.
+      </p>
+    </section>
+
+    <section class="cast-grid" aria-label="Figuren">
+      <article class="cast-card">
+        <div class="portrait portrait-mira" aria-hidden="true"></div>
+        <div>
+          <p class="role">Protagonistin</p>
+          <h2>Mira</h2>
+          <p>Eine junge Beobachterin, die zwischen Anpassung und Aufbruch steht.</p>
+          <a class="button" href="figuren/mira.html">Figurenseite oeffnen</a>
+        </div>
+      </article>
+
+      <article class="cast-card">
+        <div class="portrait portrait-jonas" aria-hidden="true"></div>
+        <div>
+          <p class="role">Gegenspieler</p>
+          <h2>Jonas</h2>
+          <p>Charmant, klug und gefaehrlich ruhig, wenn es um Kontrolle geht.</p>
+          <a class="button" href="figuren/jonas.html">Figurenseite oeffnen</a>
+        </div>
+      </article>
+
+      <article class="cast-card">
+        <div class="portrait portrait-elia" aria-hidden="true"></div>
+        <div>
+          <p class="role">Erzaehlinstanz</p>
+          <h2>Elia</h2>
+          <p>Eine Stimme von aussen, die mehr weiss, als sie anfangs preisgibt.</p>
+          <a class="button" href="figuren/elia.html">Figurenseite oeffnen</a>
+        </div>
+      </article>
+
+      <article class="cast-card">
+        <div class="portrait portrait-hippolyta" aria-hidden="true"></div>
+        <div>
+          <p class="role">Koenigin der Amazonen</p>
+          <h2>Hippolyta</h2>
+          <p>Eine wache, stolze Figur zwischen politischer Rolle und persoenlicher Haltung.</p>
+          <a class="button" href="figuren/hippolyta.html">Figurenseite oeffnen</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="workflow">
+      <h2>Naechste Schritte vom Prototyp zur Auffuehrung</h2>
+      <ol>
+        <li>Figurenliste finalisieren und fuer jede Figur eine Seite anlegen.</li>
+        <li>Portraets als JPG oder PNG in den Ordner <code>assets</code> legen.</li>
+        <li>Audio-Dateien als MP3 in <code>assets/audio</code> ablegen und verlinken.</li>
+        <li>Website online stellen, damit QR-Codes auf echte Webadressen zeigen.</li>
+        <li>QR-Code-Druckseite pruefen und Codes fuer Plakate, Programmhefte oder Stationen exportieren.</li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

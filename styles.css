@@ -1,0 +1,455 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f3ee;
+  --paper: #ffffff;
+  --ink: #202327;
+  --muted: #6c7178;
+  --line: #d9d5ce;
+  --stage: #2f3741;
+  --red: #9d2f3d;
+  --gold: #c89b43;
+  --green: #477366;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background: linear-gradient(180deg, #f9f7f2 0%, var(--bg) 100%);
+}
+
+a {
+  color: inherit;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 16px clamp(18px, 5vw, 56px);
+  border-bottom: 1px solid var(--line);
+  background: rgba(246, 243, 238, 0.92);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brand span {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--stage);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+nav {
+  display: flex;
+  gap: 14px;
+}
+
+nav a,
+.back-link {
+  color: var(--muted);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav a[aria-current="page"] {
+  color: var(--ink);
+}
+
+main {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 54px 0;
+}
+
+.intro {
+  max-width: 780px;
+  margin-bottom: 34px;
+}
+
+.intro.compact {
+  max-width: 900px;
+}
+
+.kicker,
+.role {
+  margin: 0 0 10px;
+  color: var(--red);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  margin: 0;
+  line-height: 1.04;
+}
+
+h1 {
+  max-width: 12ch;
+  font-size: clamp(2.7rem, 8vw, 5.8rem);
+}
+
+.intro p:not(.kicker),
+.profile-copy p,
+.cast-card p,
+.workflow li,
+.qr-card p {
+  color: var(--muted);
+  font-size: 1.03rem;
+  line-height: 1.65;
+}
+
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.cast-card,
+.profile,
+.workflow,
+.qr-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 20px 50px rgba(32, 35, 39, 0.08);
+}
+
+.cast-card {
+  display: grid;
+  gap: 20px;
+  padding: 16px;
+}
+
+.portrait {
+  min-height: 300px;
+  border-radius: 6px;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.35) 0 8%, transparent 9%),
+    radial-gradient(circle at 50% 36%, rgba(22, 23, 24, 0.85) 0 17%, transparent 18%),
+    radial-gradient(ellipse at 50% 80%, rgba(22, 23, 24, 0.82) 0 31%, transparent 32%),
+    linear-gradient(145deg, #d9d1c2, #8e9a98);
+}
+
+.portrait-mira {
+  background-color: var(--red);
+  background-image:
+    radial-gradient(circle at 50% 30%, #f3d1bd 0 10%, transparent 11%),
+    radial-gradient(circle at 50% 35%, #2a2425 0 18%, transparent 19%),
+    radial-gradient(ellipse at 50% 82%, #773241 0 31%, transparent 32%),
+    linear-gradient(145deg, #e7c55e, #9d2f3d);
+}
+
+.portrait-jonas {
+  background-image:
+    radial-gradient(circle at 50% 30%, #d4b49b 0 10%, transparent 11%),
+    radial-gradient(circle at 50% 35%, #1f2730 0 18%, transparent 19%),
+    radial-gradient(ellipse at 50% 82%, #293743 0 31%, transparent 32%),
+    linear-gradient(145deg, #9eb1bc, #293743);
+}
+
+.portrait-elia {
+  background-image:
+    radial-gradient(circle at 50% 30%, #dec8ae 0 10%, transparent 11%),
+    radial-gradient(circle at 50% 35%, #36271e 0 18%, transparent 19%),
+    radial-gradient(ellipse at 50% 82%, #477366 0 31%, transparent 32%),
+    linear-gradient(145deg, #b9c9a9, #477366);
+}
+
+.portrait-hippolyta {
+  background-image:
+    radial-gradient(circle at 50% 30%, #dfb99f 0 10%, transparent 11%),
+    radial-gradient(circle at 50% 35%, #2f2028 0 18%, transparent 19%),
+    radial-gradient(ellipse at 50% 82%, #5f3d68 0 31%, transparent 32%),
+    linear-gradient(145deg, #c89b43, #5f3d68);
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 8px;
+  padding: 0 16px;
+  border-radius: 6px;
+  background: var(--stage);
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.workflow {
+  margin-top: 22px;
+  padding: 24px;
+}
+
+.workflow h2 {
+  font-size: 1.4rem;
+}
+
+.workflow ol {
+  margin: 14px 0 0;
+  padding-left: 22px;
+}
+
+code {
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: #eee8dd;
+}
+
+.profile-page {
+  display: grid;
+  min-height: calc(100vh - 73px);
+  align-items: center;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.portrait-large {
+  min-height: 620px;
+  border-radius: 0;
+}
+
+.profile-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(26px, 6vw, 64px);
+}
+
+.profile-copy h1 {
+  margin-bottom: 18px;
+}
+
+audio {
+  width: 100%;
+  margin-top: 22px;
+}
+
+.hippolyta-page {
+  color: #fff8cf;
+  background:
+    linear-gradient(90deg, rgba(12, 20, 43, 0.94), rgba(23, 36, 70, 0.78)),
+    url("assets/plakat-ohne-schrift.png") center/cover fixed;
+}
+
+.hippolyta-header {
+  border-bottom-color: rgba(255, 248, 207, 0.18);
+  background: rgba(10, 18, 42, 0.76);
+}
+
+.hippolyta-header .brand span {
+  background: #fff8cf;
+  color: #172446;
+}
+
+.hippolyta-header .brand strong,
+.hippolyta-header nav a[aria-current="page"] {
+  color: #fff8cf;
+}
+
+.hippolyta-main {
+  width: min(1180px, calc(100% - 32px));
+}
+
+.hippolyta-profile {
+  grid-template-columns: minmax(300px, 0.9fr) minmax(320px, 0.95fr);
+  border-color: rgba(255, 248, 207, 0.24);
+  background:
+    linear-gradient(135deg, rgba(8, 15, 35, 0.92), rgba(38, 54, 96, 0.74));
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
+}
+
+.hippolyta-poster {
+  position: relative;
+  min-height: 680px;
+  margin: 0;
+  overflow: hidden;
+  background: #111a36;
+}
+
+.hippolyta-poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(7, 12, 30, 0.04), rgba(7, 12, 30, 0.34)),
+    radial-gradient(circle at 45% 20%, rgba(255, 248, 207, 0.18), transparent 24%);
+}
+
+.hippolyta-poster img {
+  width: 100%;
+  height: 100%;
+  min-height: 680px;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  filter: sepia(0.16) saturate(0.92) contrast(1.04);
+}
+
+.hippolyta-copy {
+  position: relative;
+  padding: clamp(30px, 6vw, 70px);
+  background:
+    linear-gradient(180deg, rgba(14, 24, 52, 0.76), rgba(11, 18, 40, 0.94));
+}
+
+.hippolyta-copy::before {
+  content: "";
+  width: 76px;
+  height: 2px;
+  margin-bottom: 26px;
+  display: block;
+  background: #fff8cf;
+  box-shadow: 0 0 18px rgba(255, 248, 207, 0.62);
+}
+
+.hippolyta-copy .back-link,
+.hippolyta-copy p {
+  color: rgba(255, 248, 207, 0.78);
+}
+
+.hippolyta-copy .role {
+  color: #fff8cf;
+}
+
+.hippolyta-copy h1 {
+  max-width: 9ch;
+  color: #fff8cf;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.4rem, 8vw, 7rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-shadow: 0 0 28px rgba(255, 248, 207, 0.28);
+}
+
+.hippolyta-copy blockquote {
+  margin: 28px 0 4px;
+  padding-left: 18px;
+  border-left: 2px solid rgba(255, 248, 207, 0.62);
+  color: #fff8cf;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 3vw, 2.05rem);
+  line-height: 1.28;
+}
+
+.hippolyta-copy audio {
+  filter: sepia(0.18) saturate(0.82);
+}
+
+.url-field {
+  display: grid;
+  gap: 8px;
+  max-width: 560px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.url-field input {
+  min-height: 46px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font: inherit;
+}
+
+.qr-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.qr-card {
+  padding: 18px;
+  text-align: center;
+}
+
+.qr-card img {
+  width: min(100%, 260px);
+  aspect-ratio: 1;
+}
+
+.qr-card h2 {
+  margin-top: 10px;
+}
+
+.qr-card p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 820px) {
+  .app-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cast-grid,
+  .qr-grid,
+  .profile {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait-large {
+    min-height: 420px;
+  }
+
+  .hippolyta-poster,
+  .hippolyta-poster img {
+    min-height: 460px;
+  }
+}
+
+@media print {
+  .app-header,
+  .intro {
+    display: none;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  main {
+    width: 100%;
+    padding: 0;
+  }
+
+  .qr-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .qr-card {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+}
