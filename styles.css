@@ -202,6 +202,97 @@ h1 {
   text-decoration: none;
 }
 
+.overview-page {
+  color: #fff8cf;
+  background:
+    linear-gradient(90deg, rgba(12, 20, 43, 0.94), rgba(23, 36, 70, 0.72)),
+    url("assets/plakat-ohne-schrift.png") center/cover fixed;
+}
+
+.overview-main {
+  width: min(1180px, calc(100% - 32px));
+}
+
+.overview-hero {
+  max-width: 980px;
+  min-height: calc(100vh - 190px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(42px, 8vw, 92px) 0 56px;
+}
+
+.overview-logo {
+  width: min(310px, 78vw);
+  margin-bottom: 34px;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 248, 207, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+}
+
+.overview-hero .kicker {
+  color: #fff8cf;
+}
+
+.overview-hero h1 {
+  max-width: 11ch;
+  color: #fff8cf;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.4rem, 9vw, 7.4rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-shadow: 0 0 30px rgba(255, 248, 207, 0.28);
+}
+
+.overview-subtitle {
+  margin: 22px 0 20px;
+  color: #fff8cf;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.overview-hero p:not(.kicker):not(.overview-subtitle) {
+  max-width: 850px;
+  color: rgba(255, 248, 207, 0.8);
+  font-size: clamp(1.02rem, 2vw, 1.22rem);
+  line-height: 1.7;
+}
+
+.overview-cast-grid {
+  padding-bottom: 58px;
+}
+
+.overview-cast-card {
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-color: rgba(255, 248, 207, 0.2);
+  background:
+    linear-gradient(180deg, rgba(14, 24, 52, 0.82), rgba(11, 18, 40, 0.94));
+  box-shadow: 0 22px 62px rgba(0, 0, 0, 0.28);
+}
+
+.overview-cast-card h2 {
+  color: #fff8cf;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 500;
+}
+
+.overview-cast-card p {
+  color: rgba(255, 248, 207, 0.76);
+}
+
+.overview-cast-card .button {
+  align-self: flex-start;
+  background: #fff8cf;
+  color: #172446;
+}
+
 .workflow {
   margin-top: 22px;
   padding: 24px;
@@ -336,6 +427,10 @@ audio {
 .hippolyta-copy .back-link,
 .hippolyta-copy p {
   color: rgba(255, 248, 207, 0.78);
+}
+
+.hippolyta-copy .back-link {
+  margin-top: 18px;
 }
 
 .hippolyta-copy .role {
